@@ -324,12 +324,6 @@ Please refer to the original project's license.
 - Training framework based on [sd-scripts](https://github.com/kohya-ss/sd-scripts) project
 - Thanks to all contributors for their support
 
-## 📚 Additional Documentation
-
-- [SETUP.md](SETUP.md) - Detailed environment setup guide
-- [QUICK_START.md](QUICK_START.md) - Quick start guide
-- [CONFIGURATION_SUMMARY.md](CONFIGURATION_SUMMARY.md) - Configuration summary
-
 ---
 
 **Note**: This implementation directly uses pre-extracted 3D model features without scattering calculations, simplifying the feature extraction process while maintaining high-quality SAR image generation capabilities.
