@@ -3,7 +3,6 @@ import sys
 import torch
 from PIL import Image
 
-# 设置 ComfyUI 模块路径（确保能找到 comfy、nodes、folder_paths 等模块）
 _script_dir = os.path.dirname(os.path.abspath(__file__))
 if _script_dir not in sys.path:
     sys.path.insert(0, _script_dir)
@@ -25,7 +24,6 @@ from nodes import (
 )
 from comfy.samplers import KSampler
 
-# 尝试接入项目根目录下的 3D 推理器（复刻训练样张生成路径）
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
   sys.path.append(PROJECT_ROOT)
@@ -95,8 +93,6 @@ def main_single_from_file(prompt_file: str):
   out_path = os.path.join(out_dir, f"output_{timestamp}.png")
 
   # 兼容加载训练好的融合网络权重：
-  # 1) 若设置了 FUSION_WEIGHTS_LOAD 则直接使用
-  # 2) 否则尝试根据 LORA_WEIGHTS 同前缀推导 *_fusion_weights.safetensors
   fusion_env = os.environ.get("FUSION_WEIGHTS_LOAD")
   if not fusion_env:
     def derive_fusion_path(lora_path: str) -> str:
@@ -159,8 +155,6 @@ def main_single_from_file(prompt_file: str):
 
 
 def main_3d():
-  """三模态融合推理（使用与训练样张相同的采样与编码路径）"""
-  # 切到项目根，便于相对路径解析（NPZ/权重等）
   os.chdir(PROJECT_ROOT)
 
   # 基础路径（按项目结构）
@@ -180,9 +174,6 @@ def main_3d():
   os.makedirs(out_dir, exist_ok=True)
   out_path = os.path.join(out_dir, "output_3dfusion.png")
 
-  # 兼容加载训练好的融合网络权重：
-  # 1) 若设置了 FUSION_WEIGHTS_LOAD 则直接使用
-  # 2) 否则尝试根据 LORA_WEIGHTS 同前缀推导 *_fusion_weights.safetensors
   fusion_env = os.environ.get("FUSION_WEIGHTS_LOAD")
   if not fusion_env:
     def derive_fusion_path(lora_path: str) -> str:
@@ -245,7 +236,6 @@ def main_3d():
 
 
 def main_comfy():
-  """原 Comfy 工作流：文本图生成（回退路径）"""
   # 设置工作目录
   os.chdir(os.path.dirname(os.path.abspath(__file__)))
   
@@ -282,7 +272,6 @@ def main_comfy():
 
 def main_batch_comfy():
   """在本工作流基础上进行批量生成：读取 aircraft 下的 <id>.txt 首行提示词"""
-  # 工作目录指向当前脚本所在目录（Comfy 资源路径依赖）
   os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
   # 初始化与加载（仅一次）
