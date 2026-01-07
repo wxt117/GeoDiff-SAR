@@ -1,0 +1,1 @@
+SAR image,King Air 350i,Ku-band,High,VH-Polarization,0.0

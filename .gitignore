@@ -1,0 +1,44 @@
+# 模型权重文件（需要用户自行下载）
+Stable-diffusion/SD3/*.safetensors
+Stable-diffusion/SD3/*.ckpt
+Stable-diffusion/SD3/*.pt
+clip/*.safetensors
+clip/*.ckpt
+clip/*.pt
+VAE/*.safetensors
+VAE/*.ckpt
+VAE/*.pt
+
+# 输出文件
+output/*.safetensors
+output/*.ckpt
+output/*.png
+output/*.json
+logs/*
+
+# 点云特征（可能包含大量文件）
+extracted_features_0914/*.pt
+extracted_features_0914/*.npy
+
+# Python缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# 虚拟环境
+venv/
+.venv/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db

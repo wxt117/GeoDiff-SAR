@@ -1,0 +1,5 @@
+qinglong, aircraft, military
+qinglong, aircraft, military, side view
+qinglong, aircraft, military, front view
+qinglong, aircraft, military, top view
+qinglong, aircraft, military, detailed

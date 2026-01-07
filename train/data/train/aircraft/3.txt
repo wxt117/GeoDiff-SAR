@@ -1,0 +1,1 @@
+SAR image,Kodiak 100,Ku-band,High,HV-Polarization,0.0

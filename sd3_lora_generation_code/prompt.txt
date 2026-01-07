@@ -1,0 +1,1 @@
+SAR image,Pilatus PC 12,Ku-band,High,VV-Polarization,0.6
