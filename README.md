@@ -303,16 +303,7 @@ A: Control fusion strength via the `FUSION_INJECTION_SCALE` environment variable
 
 ## 📄 Citation
 
-If you find this project helpful for your research, please cite the GeoDiff-SAR paper:
-
-```bibtex
-@article{geodiff-sar,
-  title={GeoDiff-SAR: A Geometric Prior Guided Diffusion Model for SAR Image Generation},
-  author={...},
-  journal={...},
-  year={2026}
-}
-```
+If you find this project helpful for your research, please cite the GeoDiff-SAR paper
 
 ## 📝 License
 
