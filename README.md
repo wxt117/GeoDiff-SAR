@@ -1,4 +1,4 @@
-# GeoDiff-SAR: SAR Image Generation via Multi-Modal Feature Fusion
+# GeoDiff-SAR: A Geometric Prior Guided Diffusion Model for SAR Image Generation
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.0+](https://img.shields.io/badge/pytorch-2.0+-green.svg)](https://pytorch.org/)
