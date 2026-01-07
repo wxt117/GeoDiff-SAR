@@ -12,6 +12,7 @@ GeoDiff-SAR is a novel approach to SAR image generation that leverages geometric
 
 The overall architecture of the proposed GeoDiff-SAR framework is shown below. (a) Construction of Geometric Priors: 3D models are processed via a point cloud processing module to extract explicit geometric scattering characteristics, such as multi-bounce reflections, serving as a robust physical prior. (b) Multi-modal Fusion Network: These physical features are synthesized with textual and visual conditions through a multi-modal fusion network to condition the Stable Diffusion 3.5 backbone, which is efficiently adapted to the SAR domain using LoRA (trainable) while keeping the pre-trained weights
 frozen. (c) Controllable Generative Model: As depicted in the top-right, the generated high-fidelity SAR images are utilized to augment scarce real training data for downstream PyTorch Image Models Multi-Label Classification tasks, thereby validating the practical utility and effectiveness of the proposed data augmentation strategy.
+
 <img width="1422" height="617" alt="fig-overall" src="https://github.com/user-attachments/assets/b334bf0a-1928-4c93-9f77-18e7159986c3" />
 
 ### ✨ Key Features
