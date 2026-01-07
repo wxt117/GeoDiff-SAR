@@ -1,12 +1,9 @@
-# LoRA train script by @Akegarasu modify by @bdsqlsz
-
-#训练模式(Lora、db、sdxl_lora、Sdxl_db、sdxl_cn3l、stable_cascade_db、stable_cascade_lora、controlnet、hunyuan_lora、hunyuan_db、sd3_db、sd3_lora、flux_lora、flux_db)
 $train_mode = "sd3_lora"
 
 # 三模态特征融合设置
 $enable_3d_fusion = 1                   # 启用三模态特征融合
 $pointcloud_dir = "./3d_features"       # 3D点云特征目录
-$fusion_method = "hybrid_film_attn"                   # 融合方法: concat, add, attention, gentle，gated
+$fusion_method = "hybrid_film_attn"     # 融合方法: concat, add, attention, gentle，gated
 $pointcloud_dim = 64                    # 3D点云特征维度 (实际维度)
 $image_feature_dim = 16                  # 图像特征维度
 
@@ -19,7 +16,7 @@ $train_data_dir = "./train/data/train" # train dataset path | 训练数据集路
 $reg_data_dir = ""	# reg dataset path | 正则数据集化路径
 $network_weights = "" # pretrained weights for LoRA network | 若需要从已有的 LoRA 模型上继续训练，请填写 LoRA 模型路径。
 $network_multiplier = 1.0 # lora权重倍数，默认1.0
-$training_comment = "this LoRA model created from bdsqlsz by bdsqlsz'script" # training_comment | 训练介绍，可以写作者名或者使用触发关键词
+$training_comment = "this LoRA model created from bdsqlsz by bdsqlsz'script" 
 $dataset_class = ""
 #$dataset_config = "./toml/datasets_qinglong.toml" # dataset config | 数据集配置文件路径
 $disable_mmap_load_safetensors = 0 #在wsl下加载模型速度增加
@@ -132,7 +129,7 @@ $lr_scheduler_timescale = 0 #times scale |时间缩放，仅在 lr_scheduler 为
 $lr_scheduler_min_lr_ratio = 0.1 #min lr ratio |最小学习率比率，仅在 lr_scheduler 为 cosine_with_min_lr、、warmup_stable_decay 时需要填写这个值，默认0
 
 #optimizer | 优化器
-$optimizer_type = "Prodigy"#原：PagedAdamW8bit
+$optimizer_type = "Prodigy"
 # 可选优化器"adaFactor","AdamW","AdamW8bit","Lion","SGDNesterov","SGDNesterov8bit","DAdaptation",  
 # 新增优化器"Lion8bit"(速度更快，内存消耗更少)、"DAdaptAdaGrad"、"DAdaptAdan"(北大最新算法，效果待测)、"DAdaptSGD"
 # 新增DAdaptAdam、DAdaptLion、DAdaptAdanIP，强烈推荐DAdaptAdam
