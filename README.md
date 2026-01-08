@@ -6,6 +6,9 @@
 
 This repository contains the official implementation of **GeoDiff-SAR**, a diffusion model framework for Synthetic Aperture Radar (SAR) image generation. The implementation is based on Stable Diffusion 3.5 (SD3.5) with LoRA fine-tuning, achieving high-quality SAR image generation through **tri-modal feature fusion** (text, 3D point cloud, and image features).
 
+**If you find this work useful for your research, please cite our paper:**
+https://arxiv.org/abs/2601.03499
+
 ## 📋 Overview
 
 GeoDiff-SAR is a novel approach to SAR image generation that leverages geometric priors from 3D models. This implementation **directly uses pre-extracted 3D model features** without requiring scattering calculations, simplifying the feature extraction pipeline. By fusing text descriptions, 3D geometric features, and image features, we achieve high-fidelity SAR image generation.
